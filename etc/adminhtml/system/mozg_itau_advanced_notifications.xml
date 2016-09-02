@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="mozg_itau_advanced_notifications" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Advanced: Mozg Payment Notifications]]></label>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+        <field id="ignore_refund_notification" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Ignore refund notification</label>
+            <tooltip>If the refund is done on the Mozg Platform it will send a refund notification to Magento which automatically creates a credit memo. If you set this setting to 'Yes', this will not happen because it will not process any of the REFUND notification that is received.</tooltip>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            <config_path>payment/mozg_itau_abstract/ignore_refund_notification</config_path>
+        </field>
+        <field id="multiple_merchants" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Allow multiple merchants</label>
+            <tooltip><![CDATA[Allow notifications sent from other Mozg merchant accounts. Keep in mind that the Notification user name and password should be the same for all the merchant accounts]]></tooltip>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+            <config_path>payment/mozg_itau_abstract/multiple_merchants</config_path>
+        </field>
+    </group>
+</include>

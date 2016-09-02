@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <mozg_itau_abstract>
+                <active>0</active>
+                <model>Mozg\Itau\Model\Method\MozgAbstract</model>
+                <recurring_type>ONECLICK</recurring_type>
+                <order_status>pending</order_status>
+                <demo_mode>0</demo_mode>
+                <debug>1</debug>
+                <title_renderer>title_image</title_renderer>
+                <sepa_flow>sale</sepa_flow>
+                <group>mozg</group>
+            </mozg_itau_abstract>
+            <mozg_itau_cc>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\Cc</model>
+                <title>Mozg Itaú CreditCard</title>
+                <allowspecific>0</allowspecific>
+                <sort_order>2</sort_order>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <useccv>1</useccv>
+                <cse_enabled>0</cse_enabled><!-- Client-Side Encryption - DESATIVEI -->
+                <enable_moto>0</enable_moto>
+                <payment_action>authorize</payment_action>
+                <group>mozg</group>
+            </mozg_itau_cc>
+            <mozg_itau_oneclick>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\Oneclick</model>
+                <title>Mozg Itaú OneClick</title>
+                <allowspecific>0</allowspecific>
+                <sort_order>1</sort_order>
+                <cctypes>AE,VI,MC,DI</cctypes> <!-- important to show the payment method isAvailabe()-->
+                <recurring_payment_type>ONECLICK</recurring_payment_type>
+                <payment_action>authorize</payment_action>
+                <group>mozg</group>
+            </mozg_itau_oneclick>
+            <mozg_itau_hpp>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\Hpp</model>
+                <order_status>pending</order_status>
+                <title>Mozg Itaú HPP</title>
+                <payment_selection_on_mozg>1</payment_selection_on_mozg>
+                <payment_routine>single</payment_routine>
+                <delivery_days>5</delivery_days>
+                <allowspecific>0</allowspecific>
+                <sort_order>3</sort_order>
+                <place_order_url>mozg_itau/process/redirect</place_order_url>
+                <order_place_redirect_url>mozg_itau/process/redirect</order_place_redirect_url>
+                <payment_action>order</payment_action>
+                <group>mozg</group>
+                <!-- DEFAULT -->
+                <codigo_empresa>J0026376210001060000011110</codigo_empresa>
+                <chave_criptografia>S8G9F8C2E3R4K2FD</chave_criptografia>
+                <vencimento>5</vencimento>
+                <obs_ad_1>- Sr. Caixa, cobrar multa de 2% após o vencimento</obs_ad_1>
+                <obs_ad_2>- Receber até 10 dias após o vencimento</obs_ad_2>
+                <obs_ad_3>- acme@acme.com.br - Tel .: (99) 9999-9999</obs_ad_3>
+                <obs>3</obs>
+            </mozg_itau_hpp>
+            <mozg_itau_sepa>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\Sepa</model>
+                <title>Sepa Itaú Direct Debit</title>
+                <allowspecific>0</allowspecific>
+                <sort_order>4</sort_order>
+                <payment_action>authorize</payment_action>
+                <group>mozg</group>
+            </mozg_itau_sepa>
+            <mozg_itau_pos>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\Pos</model>
+                <order_status>pending</order_status>
+                <title>Mozg POS</title>
+                <allowspecific>0</allowspecific>
+                <sort_order>5</sort_order>
+                <place_order_url>mozg_itau/process/redirect</place_order_url>
+                <order_place_redirect_url>mozg_itau/process/redirect</order_place_redirect_url>
+                <payment_action>order</payment_action>
+                <group>mozg</group>
+            </mozg_itau_pos>
+            <mozg_itau_pay_by_mail>
+                <active>1</active>
+                <model>Mozg\Itau\Model\Method\PayByMail</model>
+                <order_status>pending</order_status>
+                <title>Mozg Itaú PayByMail</title>
+                <allowspecific>0</allowspecific>
+                <sort_order>6</sort_order>
+                <session_validity>3</session_validity>
+                <payment_action>authorize</payment_action>
+                <group>mozg</group>
+            </mozg_itau_pay_by_mail>
+        </payment>
+    </default>
+</config>

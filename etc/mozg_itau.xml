@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Mozg_Itau:etc/mozg_itau.xsd">
+    <mozg_credit_cards>
+        <type id="AE" order="0">
+            <label>American Express</label>
+            <code_alt>amex</code_alt>
+        </type>
+        <type id="VI" order="10">
+            <label>Visa</label>
+            <code_alt>visa</code_alt>
+        </type>
+        <type id="MC" order="20">
+            <label>MasterCard</label>
+            <code_alt>mc</code_alt>
+        </type>
+        <type id="DI" order="30">
+            <label>Discover</label>
+            <code_alt>discover</code_alt>
+        </type>
+        <type id="SM" order="40">
+            <label>Maestro/Switch</label>
+            <code_alt>maestro</code_alt>
+        </type>
+        <type id="JCB" order="50">
+            <label>JCB</label>
+            <code_alt>jcb</code_alt>
+        </type>
+        <type id="DN" order="60">
+            <label>Diners</label>
+            <code_alt>diners</code_alt>
+        </type>
+        <type id="MI" order="70">
+            <label>Maestro</label>
+            <code_alt>maestro</code_alt>
+        </type>
+        <type id="UN" order="80">
+            <label>UnionPay</label>
+            <code_alt>unionpay</code_alt>
+        </type>
+    </mozg_credit_cards>
+</payment>

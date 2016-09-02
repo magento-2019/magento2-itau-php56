@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Paypal\Model\Billing\Agreement" type="Mozg\Itau\Model\Billing\Agreement" />
+    <type name="Mozg\Itau\Logger\Handler\MozgDebug">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\Handler\MozgNotification">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\Handler\MozgResult">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\Handler\MozgCronjob">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\Handler\MozgInfo">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\Handler\MozgError">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Logger\MozgLogger">
+        <arguments>
+            <argument name="name" xsi:type="string">MozgLoggerTest</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="mozgDebug" xsi:type="object">Mozg\Itau\Logger\Handler\MozgDebug</item>
+                <item name="mozgNotification" xsi:type="object">Mozg\Itau\Logger\Handler\MozgNotification</item>
+                <item name="mozgResult" xsi:type="object">Mozg\Itau\Logger\Handler\MozgResult</item>
+                <item name="mozgCronjob" xsi:type="object">Mozg\Itau\Logger\Handler\MozgCronjob</item>
+                <item name="mozgInfo" xsi:type="object">Mozg\Itau\Logger\Handler\MozgInfo</item>
+                <item name="mozgError" xsi:type="object">Mozg\Itau\Logger\Handler\MozgError</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Mozg\Itau\Model\Config\Reader">
+        <arguments>
+            <argument name="fileName" xsi:type="string">mozg_itau.xml</argument>
+            <argument name="converter" xsi:type="object">Mozg\Itau\Model\Config\Converter</argument>
+            <argument name="schemaLocator" xsi:type="object">Mozg\Itau\Model\Config\SchemaLocator</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="mozgPaymentConfigDataStorage" type="Magento\Framework\Config\Data">
+        <arguments>
+            <argument name="reader" xsi:type="object">Mozg\Itau\Model\Config\Reader</argument>
+            <argument name="cacheId" xsi:type="string">mozg_itau_config</argument>
+        </arguments>
+    </virtualType>
+    <type name="Mozg\Itau\Helper\Data">
+        <arguments>
+            <argument name="dataStorage" xsi:type="object">mozgPaymentConfigDataStorage</argument>
+        </arguments>
+    </type>
+    <preference for="Mozg\Itau\Api\GuestMozgPaymentMethodManagementInterface" type="Mozg\Itau\Model\GuestMozgPaymentMethodManagement" />
+    <preference for="Mozg\Itau\Api\MozgPaymentMethodManagementInterface" type="Mozg\Itau\Model\MozgPaymentMethodManagement" />
+</config>

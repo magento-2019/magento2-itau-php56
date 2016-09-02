@@ -1,0 +1,62 @@
+Name on Card,Nome no cartão
+Credit Card Information,Informação do cartão de crédito
+Credit Card Type,tipo de cartão de crédito
+Credit Card Number,Número do Cartão de Crédito
+Credit Card Owner,Dono do cartão de crédito
+Expiration Date,Data de validade
+Card Verification Number,numero de verificação do cartão
+--Please Select--,--Por favor selecione--
+What is this?,O que é isso?
+Remember these details,lembre desses detalhes
+Select your Bank,Selecione seu banco
+You will be redirected to the Mozg website.,Você será redirecionado para o site do Mozg.
+Update,Atualizar
+Place order,Faça a encomenda
+Continue to Mozg,Continue a Mozg
+Unknown,Desconhecido
+Mismatch between Live/Test modes of Magento store and the Mozg platform,Incompatibilidade entre os modos Live / Teste de loja de Magento e a plataforma Mozg
+You have cancelled the order. Please try again,"Você cancelou a ordem. Por favor, tente novamente"
+"Your payment failed, Please try again later","Seu pagamento falhou, por favor tente novamente mais tarde"
+"Response is empty, please check your webserver that the result url accepts parameters","Response está vazio, por favor, verifique o seu servidor web que a url resultado aceita parâmetros"
+ResultUrl authentification failure,falha de autenticação ResultUrl
+Order does not exists with increment_id: %1,O fim não existe com increment_id:% 1
+Empty merchantReference,merchantReference vazia
+3D-secure validation was successful,validação 3D-protegido foi bem sucedida
+3D-secure validation was unsuccessful.,validação 3D-Secure não teve sucesso.
+Customer was redirected to bank for 3D-secure validation.,Cliente foi redirecionada para o banco para validação 3D-Secure.
+Used existing billing agreement #%s.,Usado existente acordo de faturamento #% s.
+Created billing agreement #%1.,Contrato de faturamento criado #% 1.
+Failed to create billing agreement for this order.,Falha ao criar acordo de faturamento para este fim.
+Failed to create billing agreement for this order (listRecurringCall did not contain contract),Falha ao criar acordo de faturamento para este fim (listRecurringCall não continha contrato)
+Mozg Refund Successfully completed,Mozg Reembolso concluído com êxito
+Payment is pre authorised waiting for capture,O pagamento é pré autorizado à espera de captura
+Capture Mode set to Manual,Capture Mode definido como Manual
+Mozg Payment is in Manual Review check the Mozg platform,Mozg O pagamento é em cheque revisão manual da plataforma Mozg
+Mozg Payment Successfully completed,Mozg Pagamento concluído com êxito
+Shipment created by Mozg,Expedição criado por Mozg
+3D secure failed,3D seguro falhou
+The capture action failed,A ação de captura falhou
+The refund action failed,A acção de restituição não
+Failed to disable this contract,Falha ao desativar esse contrato
+Card encryption failed,criptografia de cartão falhou
+The authorize action is not available.,A ação autorizar não está disponível.
+Empty result.,resultado vazio.
+3D secure is not valid,3D seguro não é válido
+The transaction is not permitted.,A operação não é permitida.
+Declined due to the Card Security Code(CVC) being incorrect. Please check your CVC code!,"Diminuído devido ao código de segurança do cartão (CVC), sendo incorreto. Por favor, verifique o seu código CVC!"
+The card is restricted.,O cartão é restrito.
+The payment is REFUSED because the saved card is removed. Please try an other payment method.,O pagamento é recusado porque o cartão guardado é removido. Por favor tente um outro método de pagamento.
+The expiry month is not set. Please check your expiry month!,"O mês de validade não está definido. Por favor, verifique o seu mês de vencimento!"
+The payment is REFUSED,O pagamento é recusado
+Failed to disable this contract,Falha ao desativar esse contrato
+You will be redirected to the Mozg App,Você será redirecionado para a Mozg App
+Continue to Mozg App,Continue a Mozg App
+
+Mozg Itaú All-in-One Payment Solutions,Mozg Soluções de Pagamento - Itaú
+Point of Sale (POS) integration,Integração ao Ponto de Venda
+Process Point of Sales transactions,Ponto de processo de transações de vendas
+You will be redirected to the Mozg App.,Você será redirecionado para a operadora Itaú.
+Continue a Mozg App,Continuar
+Mozg Itaú CreditCard,Mozg Itaú CreditCard
+Sepa Itaú Direct Debit,Mozg Itaú Sepa Direct Debit
+Mozg Itaú POS,Mozg Itaú POS

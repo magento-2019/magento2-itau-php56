@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="mozg_itau_getting_started" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label><![CDATA[Documentation & Support]]></label>
+        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+        <comment><![CDATA[
+                            <ul class="mozg-list">
+                                <li><a target="_blank" href="https://docs.mozg.com/manuals/magento/magento2-integration">Manual for setting up the module</a></li>
+                                <li><a target="_blank" href="https://www.mozg.com/home/payment-services/plug-ins/magento#form"><strong>Sign</strong> up for a test account</a></li>
+                                <li>The latest version of the <a target="_blank" href="https://github.com/mozg/mozg-magento2/releases">Mozg Magento module is also available through GitHub</a>.</li>
+                            </ul>
+                            <p> In the test modus you need to use test cards. <a target="_blank" href="http://mozg.com/test-card-numbers">Test cards can be found here</a>
+                            <p>You can find this in the Mozg back-office. The Mozg back-office can be found on <a target="_blank" href="https://ca-test.mozg.com">https://ca-test.mozg.com</a> for test or <a target="_blank" href="https://ca-live.mozg.com">https://ca-live.mozg.com</a> for live.</p>
+                            <p>If you have any further questions, please visit the <a target="_blank" href="http://www.mozg.com">Mozg.com</a> website or email <a href="mailto:magento@mozg.com">magento@mozg.com</a>.</p>
+                            ]]></comment>
+        <field id="version" translate="label" type="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>Extension version</label>
+            <frontend_model>\Mozg\Itau\Block\Adminhtml\System\Config\Field\Version</frontend_model>
+        </field>
+    </group>
+</include>
